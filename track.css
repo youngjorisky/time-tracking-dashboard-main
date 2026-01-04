@@ -23,6 +23,18 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 30px;
+}
+p,
+h2,
+h3 {
+  font-weight: 200;
+}
+h4 {
+  font-weight: 500;
+}
+p {
+  opacity: 0.7;
 }
 .time-track-container {
   width: 350px;
@@ -31,13 +43,13 @@ body {
   gap: 20px;
 }
 .identity {
-  border: 1px solid white;
+  background-color: hsl(235, 46%, 20%);
   display: flex;
   flex-direction: column;
   border-radius: 20px;
 }
 .upper-identity {
-  border: 1px solid white;
+  background-color: hsl(246, 80%, 60%);
   height: 150px;
   display: flex;
   flex-direction: row;
@@ -67,12 +79,15 @@ body {
   gap: 20px;
 }
 .division {
-  border: 1px solid white;
   border-radius: 20px;
+  position: relative;
+  overflow: hidden;
 }
 .icon-container {
   position: relative;
   height: 50px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 .icon-container img {
   position: absolute;
@@ -81,12 +96,14 @@ body {
   width: 80px;
 }
 .text-container {
-  border: 1px solid white;
+  position: relative;
+  z-index: 2;
   border-radius: 20px;
   height: 150px;
   display: flex;
+  padding: 0px 30px;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .text-container h2,
 .text-container h4,
@@ -110,4 +127,69 @@ body {
 }
 .left-side {
   gap: 10px;
+}
+.work {
+  background-color: hsl(15, 100%, 70%);
+}
+.play {
+  background-color: hsl(195, 74%, 62%);
+}
+.study {
+  background-color: hsl(348, 100%, 68%);
+}
+.exercise {
+  background-color: hsl(145, 58%, 55%);
+}
+.social {
+  background-color: hsl(264, 64%, 52%);
+}
+.self-care {
+  background-color: hsl(43, 84%, 65%);
+}
+.text-container {
+  background-color: hsl(235, 46%, 20%);
+}
+@media (min-width: 1200px) {
+  body {
+    height: 100vh;
+    justify-content: center;
+  }
+  .time-track-container {
+    width: 1000px;
+    height: 470px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  .time-track-divisions {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 1fr 1fr;
+  }
+  .upper-identity {
+    height: 320px;
+    width: 250px;
+    flex-direction: column;
+    padding: 0px 30px 30px 30px;
+  }
+  .upper-identity {
+    align-items: start;
+  }
+  .upper-identity h2 {
+    font-size: 40px;
+  }
+  .lower-identity {
+    flex-direction: column;
+    align-items: start;
+    padding: 30px;
+    gap: 15px;
+  }
+  .lower-identity h4 {
+    margin: 0px;
+    font-weight: 200;
+    opacity: 0.7;
+  }
+  .text-container {
+    height: 200px;
+  }
 }
