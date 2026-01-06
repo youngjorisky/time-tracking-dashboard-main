@@ -206,6 +206,7 @@ p {
   .text-container .right-side {
     flex-direction: column;
     align-items: start;
+    gap: 10px;
   }
   .text-container .right-side h2 {
     font-size: 3rem;

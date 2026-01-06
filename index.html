@@ -30,109 +30,13 @@
           </div>
         </div>
         <div class="lower-identity">
-          <h4>Daily</h4>
-          <h4>Weekly</h4>
-          <h4>Monthly</h4>
+          <h4 onclick="filterElement('daily')">Daily</h4>
+          <h4 onclick="filterElement('weekly')">Weekly</h4>
+          <h4 onclick="filterElement('yearly')">Monthly</h4>
         </div>
       </div>
 
-      <div class="time-track-divisions">
-        <div class="work division">
-          <div class="icon-container">
-            <img src="./images/icon-work.svg" />
-          </div>
-          <div class="text-container">
-            <div class="left-side">
-              <h4>Work</h4>
-              <h4>...</h4>
-            </div>
-            <div class="right-side">
-              <h2>32hrs</h2>
-              <p>Last Week - 36hrs</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="play division">
-          <div class="icon-container">
-            <img src="./images/icon-play.svg" />
-          </div>
-          <div class="text-container">
-            <div class="left-side">
-              <h4>Play</h4>
-              <h2>...</h2>
-            </div>
-            <div class="right-side">
-              <h2>10hrs</h2>
-              <p>Last Week - 8hrs</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="study division">
-          <div class="icon-container">
-            <img src="./images/icon-study.svg" />
-          </div>
-          <div class="text-container">
-            <div class="left-side">
-              <h4>Study</h4>
-              <h2>...</h2>
-            </div>
-            <div class="right-side">
-              <h2>4hrs</h2>
-              <p>Last Week - 7hrs</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="exercise division">
-          <div class="icon-container">
-            <img src="./images/icon-exercise.svg" />
-          </div>
-          <div class="text-container">
-            <div class="left-side">
-              <h4>Exercise</h4>
-              <h2>...</h2>
-            </div>
-            <div class="right-side">
-              <h2>4hrs</h2>
-              <p>Last Week - 5hrs</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="social division">
-          <div class="icon-container">
-            <img src="./images/icon-social.svg" />
-          </div>
-          <div class="text-container">
-            <div class="left-side">
-              <h4>Social</h4>
-              <h2>...</h2>
-            </div>
-            <div class="right-side">
-              <h2>5hrs</h2>
-              <p>Last Week - 10hrs</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="self-care division">
-          <div class="icon-container">
-            <img src="./images/icon-self-care.svg" />
-          </div>
-          <div class="text-container">
-            <div class="left-side">
-              <h4>Self Care</h4>
-              <h2>...</h2>
-            </div>
-            <div class="right-side">
-              <h2>2hrs</h2>
-              <p>Last Week - 2hrs</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div id="time-track-divisions" class="time-track-divisions"></div>
     </div>
 
     <div class="attribution">
