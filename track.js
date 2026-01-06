@@ -7,10 +7,10 @@ fetch("data.json")
   .then((response) => response.json())
   .then((dataFile) => {
     data = dataFile;
-    displayItems("daily");
+    filterElement("daily");
   });
 
-function displayItems(type) {
+function filterElement(type) {
   trackDivisions.innerHTML = "";
 
   data.forEach((item) => {
