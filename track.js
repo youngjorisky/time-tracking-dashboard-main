@@ -11,15 +11,28 @@ fetch("data.json")
   });
 
 function filterElement(type) {
-  trackDivisions.innerHTML = "";
+  setTimeout(() => {
+    trackDivisions.innerHTML = "";
 
-  data.forEach((item) => {
-    const itemDiv = document.createElement("div");
+    button.forEach((btn) => {
+      btn.style.fontWeight = "200";
+      btn.style.opacity = "0.7";
+    });
 
-    const className = item.title.toLowerCase().replace(" ", "-");
-    itemDiv.classList.add(className, "division");
+    button.forEach((btn) => {
+      if (btn.textContent.toLowerCase() === type) {
+        btn.style.fontWeight = "700";
+        btn.style.opacity = "1";
+      }
+    });
 
-    itemDiv.innerHTML = `
+    data.forEach((item, index) => {
+      const itemDiv = document.createElement("div");
+
+      const className = item.title.toLowerCase().replace(" ", "-");
+      itemDiv.classList.add(className, "division");
+
+      itemDiv.innerHTML = `
           <div class="icon-container">
             <img src="./images/icon-${className}.svg" />
           </div>
@@ -35,6 +48,12 @@ function filterElement(type) {
           </div>
         `;
 
-    trackDivisions.appendChild(itemDiv);
-  });
+      trackDivisions.appendChild(itemDiv);
+
+      setTimeout(() => {
+        itemDiv.style.opacity = "1";
+        itemDiv.style.transform = "translateY(0)";
+      }, index * 50); // 50ms delay between each card
+    });
+  }, 200);
 }
