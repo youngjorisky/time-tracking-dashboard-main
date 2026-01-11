@@ -34,7 +34,7 @@ function filterElement(type) {
 
       itemDiv.innerHTML = `
           <div class="icon-container">
-            <img src="./images/icon-${className}.svg" />
+            <img alt ="identity.png" src="./images/icon-${className}.svg" />
           </div>
           <div class="text-container">
             <div class="left-side">
